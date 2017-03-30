@@ -37,7 +37,7 @@ Install
 
 Install the package:
 
-> $ go get github.com/mikespook/gorbac
+> $ go get github.com/jackie-thank/gorbac
 	
 Usage
 =====
@@ -74,7 +74,10 @@ Get some new permissions:
 	pC := gorbac.NewStdPermission("permission-c")
 	pD := gorbac.NewStdPermission("permission-d")
 	pE := gorbac.NewStdPermission("permission-e")
-
+	
+Get some new permission with role,"permission-a" will use already exists NewStdPermission("permiision-a") memory, not to create another memory:
+	err := rbac.AddPermissionToRole(rA, "permission-a")
+	
 Add the permissions to roles:
 
 	rA.Assign(pA)
