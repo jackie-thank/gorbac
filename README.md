@@ -29,6 +29,7 @@ Currently, goRBAC has two versions:
 
 [Version 2](https://github.com/mikespook/gorbac/tree/v2.dev) is the newly design which will continually mantain with a stable API.
 
+
 While [the master branch](https://github.com/mikespook/gorbac) will be under developing with new API and can be changed without notice.
 
 
@@ -53,7 +54,7 @@ Preparing
 
 Import the library:
 
-	import "github.com/mikespook/gorbac"
+	import "github.com/jackie-thank/gorbac"
 
 Get a new instance of RBAC:
 
