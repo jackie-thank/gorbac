@@ -78,7 +78,7 @@ Get some new permissions:
 	
 Get some new permission with role,"permission-a" will use already exists NewStdPermission("permiision-a") memory, not to create another memory:
 	
-	err := rbac.AddPermissionToRole(rA, "permission-a")
+	rbac.AddPermissionToRole(rA, "permission-a")
 	
 Add the permissions to roles:
 
