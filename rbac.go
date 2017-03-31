@@ -215,7 +215,7 @@ func (rbac *RBAC) recursionCheck(id string, p Permission) bool {
 }
 
 // Assign with permission's id to the role, add permission only one memory in gorbac.
-func (rbac *RBAC) AddPermissionToRole(role *StdRole, pid string) error {
+func (rbac *RBAC) AddPermissionToRole(role *StdRole, pid string) {
 	role.Lock()
 	p, ok := rbac.permissions[pid]
 	if !ok {
@@ -224,5 +224,4 @@ func (rbac *RBAC) AddPermissionToRole(role *StdRole, pid string) error {
 	}
 	role.permissions[p.ID()] = p
 	role.Unlock()
-	return nil
 }
