@@ -225,3 +225,12 @@ func (rbac *RBAC) AddPermissionToRole(role *StdRole, pid string) {
 	role.permissions[p.ID()] = p
 	role.Unlock()
 }
+
+// Get permission in gorbac memory, call this function you must call AddPermissionToRole to add permission in gorbac.
+func (rbac *RBAC) GetPermission(pid string) (p Permission, err error) {
+	p, ok := rbac.permissions[pid]
+	if ok {
+		return p, nil
+	}
+	return nil, errors.New("Not found permission")
+}
